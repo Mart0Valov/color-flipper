@@ -14,13 +14,23 @@ function generateRandomIndex(max) {
 // callback function for changeColorBtn
 function onClick(ev) {
     // generate number
-    const index = generateRandomIndex(colors.length - 1);
+    const colorForBody = generateRandomIndex(colors.length - 1);
+    let colorForColorName = generateRandomIndex(colors.length - 1);
 
     // change body background color
-    document.body.style.backgroundColor = colors[index];
+    document.body.style.backgroundColor = colors[colorForBody];
 
     // change color name of the colorName element
-    colorName.textContent = colors[index];
+    colorName.textContent = colors[colorForBody];
+    // change randomly the color of colorName;
+    if (colorForBody === colorForColorName) {
+        if (colorForColorName === colors.length - 1) {
+            colorForColorName--;
+        } else {
+            colorForColorName++;
+        }
+    }
+    colorName.style.color = colors[colorForColorName];
 }
 
 changeColorBtn.addEventListener('click', onClick);
