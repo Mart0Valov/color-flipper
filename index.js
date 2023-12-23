@@ -10,3 +10,16 @@ const colors = ['red', 'blue', 'green', 'yellow', 'purple'];
 function generateRandomIndex(max) {
     return Math.floor(Math.random() * max);
 }
+
+// callback function for changeColorBtn
+function onClick(ev) {
+    // generate number
+    const index = generateRandomIndex(colors.length - 1);
+
+    // change body background color
+    document.body.style.backgroundColor = colors[index];
+
+    // change color name of the colorName element
+    colorName.textContent = colors[index];
+}
+
