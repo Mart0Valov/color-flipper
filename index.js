@@ -23,3 +23,4 @@ function onClick(ev) {
     colorName.textContent = colors[index];
 }
 
+changeColorBtn.addEventListener('click', onClick);
