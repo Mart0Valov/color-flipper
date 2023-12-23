@@ -19,6 +19,12 @@
     padding: 0.2em;
     border-radius: 5px;
     color: white;
+    
+}
+
+#color-name {
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: white;
 }
 
 #change-color-btn {
