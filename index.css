@@ -14,6 +14,13 @@
     width: 40%;
 }
 
+#color-display {
+    background-color: grey;
+    padding: 0.2em;
+    border-radius: 5px;
+    color: white;
+}
+
 #change-color-btn {
     background-color: transparent;
     border: 0.2px solid black;
